@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeroesService , Heroe } from 'src/app/servicios/heroes.service';
 
 
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
