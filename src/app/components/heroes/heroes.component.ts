@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroesService , Heroe } from 'src/app/servicios/heroes.service';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,8 +13,10 @@ export class HeroesComponent {
 
   heroes: Heroe [] = [];
 
-  constructor( private _heoresService:HeroesService ) {
-    console.log("constructor");
+  constructor( private _heoresService:HeroesService,
+               private router:Router
+   ) {
+/*     console.log("constructor"); */
   }
 
 
@@ -24,7 +26,12 @@ export class HeroesComponent {
 
 this.heroes = this._heoresService.getHeroes();
 
-console.log( this.heroes)
+/* console.log( this.heroes) */
+    }
+
+    verHeroe(idx:number){
+  this.router.navigate(['/heroe', idx])
+
     }
  
 

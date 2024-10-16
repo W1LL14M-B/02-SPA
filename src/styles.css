@@ -1,5 +1,11 @@
-.card-small {
-    width: 200px; /* Ajusta el ancho según lo necesites */
+.card-columns {
+  column-count: 3; /* Para mostrar 3 columnas */
+  column-gap: 15px; /* Espacio entre columnas */
+}
+
+.card {
+  margin-bottom: 20px; /* Espaciado entre las tarjetas */
+  break-inside: avoid; /* Evita que las tarjetas se corten entre columnas */
 }
 
 
