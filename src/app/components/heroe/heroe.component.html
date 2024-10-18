@@ -1,30 +1,4 @@
 
-
-<!-- 
-<div>
-    <h1>Nombre del heroe</h1>
-    <small>fecha de apíricion</small>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <img src="assets/img/hulk.png" class="img-fluid" alt="">
-            <br /><br />
-            <a href="heroes" class="btn btn-outline-danger btn-block">Regresar</a>
-        </div>
-        <div class="col-md-8">
-            <h3>Nombre de heroe</h3>
-            <hr />
-            <p>
-                bio del heroe
-            </p>
-            <div>
-                <img src="" alt="">
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
 <div>
     <h1>{{heroe.nombre}}</h1>
     <small>{{heroe.aparicion}}</small>
@@ -33,12 +7,19 @@
         <div class="col-md-4">
             <img [src]="heroe.img" class="img-fluid" alt="{{heroe.nombre}}">
             <br /><br />
-            <a routerLink="/heroes" class="btn btn-outline-danger btn-block">Regresar</a>
+            <a routerLink="/heroes" class="btn btn-outline-danger btn-block w-100">Regresar</a>
         </div>
         <div class="col-md-8">
             <h3>{{heroe.nombre}}</h3>
             <hr />
             <p>{{heroe.bio}}</p>
+            <hr/>
+            <p>{{heroe.casa}}</p>
         </div>
-    </div>
+        <div>
+            <img *ngIf="heroe.casa === 'DC'" class="my-2 mt-2 mx-2" src="assets/img/DG2.png" width="86" height="82" alt="Descripción de DG2">
+            <img *ngIf="heroe.casa === 'Marvel'" class="my-2 mx-2" src="assets/img/Marvel.png" width="86" height="82" alt="Descripción de Marvel">
+        </div>
+
+    </div> 
 </div>
